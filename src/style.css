@@ -26,6 +26,7 @@ p {
   border-radius: 4px;
   font-weight: normal;
   font-size: 14px;
+  line-height: 25px;
 }
 
 .hero {
@@ -56,4 +57,7 @@ p {
   border-radius: 6px;
   background-color: #bccceb;
   padding: 10px;
+}
+.btn-launch:hover {
+  background-color: transparent;
 }
