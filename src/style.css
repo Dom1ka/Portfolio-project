@@ -48,24 +48,41 @@ p {
   font-size: 25px;
 }
 
-.contactMeBtn {
-  border: 1px solid #112d4e91;
-  border-radius: 6px;
-  background-color: transparent;
-  padding: 10px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.contactMeBtn:hover {
-  background-color: #3469a5e8;
-  font-weight: bolder;
-}
+
 .btn-launch {
-  border: 1px solid #112d4e;
-  border-radius: 6px;
-  background-color: #3469a5e8;
+  background-color: #c0d3f5;
+  color: #222;
   padding: 10px;
-  font-weight: bold;
+  border: none;
+  outline: none;
+  position: relative;
+
+  --border-size: 2px;
 }
+
+.btn-launch::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--border-size);
+  background-color: #3469a5e8;
+  transition: transform 300ms ease-in-out;
+
+  transform: scaleX(0);
+}
+
+.btn-launch:hover::before,
+.btn-launch:focus::before {
+  transform: scaleX(1);
+}
+
 .btn-launch:hover {
-  background-color: transparent;
-  font-weight: normal;
+  font-weight: bold;
 }
